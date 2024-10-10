@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+    <!-- Bootstrap CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+
+    <!-- j.Query CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!--ICONIFY-->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- Mode Change Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+    <!-- TESTIMONIAL CDN LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+
+    <!-- Style CSS Sheet -->
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+        /*************************** CUSTOM SCROLL BAR ****************************/
+        *,
+        html {
+            scroll-behavior: smooth;
+        }
+
+        *,
+        *:after,
+        *:before {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --white: #fff;
+            --black: #000;
+            --lite: rgba(255, 255, 255, 0.6);
+            --gray: rgba(1, 1, 1, 0.6);
+            --dark: #1e1e1d;
+            --primary: #d6863a;
+            --primary_dark: #93683f;
+            --primary_lite: #ebab61;
+            --secondary: ;
+            --secondary_dark: ;
+            --secondary_lite: ;
+            --default_font: "Nunito Sans", sans-serif;
+            --title_font: ;
+        }
+
+        ::-webkit-scrollbar {
+            height: 12px;
+            width: 4px;
+            background: var(--dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: gray;
+            -webkit-box-shadow: 0px 1px 2px var(--dark);
+        }
+
+        ::-webkit-scrollbar-corner {
+            background: var(--dark);
+        }
+
+        /*************************** DEFAULT ****************************/
+        body {
+            box-sizing: border-box;
+            margin: 0;
+            font-family: var(--default_font);
+            font-family: "Montserrat", sans-serif;
+            background-color: #fff;
+            transition: background 0.2s linear;
+        }
+
+        a {
+            text-decoration: none !important;
+            min-width: fit-content;
+            width: fit-content;
+            width: -webkit-fit-content;
+            width: -moz-fit-content;
+        }
+
+        a,
+        button {
+            transition: 0.5s;
+        }
+
+        em {
+            font-style: normal;
+            color: var(--primary_dark);
+        }
+
+        figure {
+            padding: 0;
+            margin: 0;
+        }
+
+        a,
+        p,
+        .btn {
+            font-size: 15px;
+        }
+
+        p {
+            line-height: 1.9em;
+            color: var(--gray);
+        }
+
+        a,
+        button,
+        input,
+        textarea,
+        select {
+            outline: none !important;
+        }
+
+        fieldset {
+            border: 0;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            margin: 0;
+        }
+
+        .title,
+        .sub_title {
+            font-family: var(--title_font);
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .flex,
+        .fixed_flex {
+            display: flex;
+        }
+
+        .flex_content {
+            width: 100%;
+            position: relative;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .padding_1x {
+            padding: 1rem;
+        }
+
+        .padding_2x {
+            padding: 2rem;
+        }
+
+        .padding_3x {
+            padding: 3rem;
+        }
+
+        .padding_4x {
+            padding: 4rem;
+        }
+
+        .big {
+            font-size: 3.5em;
+        }
+
+        .medium {
+            font-size: 2em;
+        }
+
+        .small {
+            font-size: 1.3em;
+        }
+
+        /*************************** Mode Changer ****************************/
+        body.dark {
+            background-color: #292c35;
+        }
+
+        /* #9b59b6 */
+        .checkbox {
+            opacity: 0;
+            position: absolute;
+        }
+
+        .checkbox-label {
+            background-color: #111;
+            width: 50px;
+            height: 26px;
+            border-radius: 50px;
+            position: relative;
+            padding: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .fa-moon {
+            color: #f1c40f;
+        }
+
+        .fa-sun {
+            color: #f39c12;
+        }
+
+        .checkbox-label .ball {
+            background-color: #fff;
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            border-radius: 50%;
+            transition: transform 0.2s linear;
+        }
+
+        .checkbox:checked+.checkbox-label .ball {
+            transform: translateX(24px);
+        }
+
+        /*************************** Slider ****************************/
+        .dp-wrap {
+            margin: 120px auto;
+            position: relative;
+            perspective: 1000px;
+            height: 100%;
+        }
+
+        .dp-slider {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+        }
+
+        .dp-slider div {
+            transform-style: preserve-3d;
+        }
+
+        .dp_item {
+            display: block;
+            position: absolute;
+            text-align: center;
+            color: #fff;
+            border-radius: 10px;
+            transition: transform 1.2s;
+        }
+
+        .dp-img img {
+            border-left: 1px solid #fff;
+        }
+
+        #dp-slider .dp_item:first-child {
+            z-index: 10 !important;
+            transform: rotateY(0deg) translateX(0px) !important;
+        }
+
+        .dp_item[data-position="2"] {
+            z-index: 9;
+            transform: rotateY(0deg) translateX(10%) scale(0.9);
+        }
+
+        .dp_item[data-position="3"] {
+            z-index: 8;
+            transform: rotateY(0deg) translateX(20%) scale(0.8);
+        }
+
+        .dp_item[data-position="4"] {
+            z-index: 7;
+            transform: rotateY(0deg) translateX(30%) scale(0.7);
+        }
+
+        #dp-next,
+        #dp-prev {
+            position: absolute;
+            top: 50%;
+            right: 16%;
+            height: 33px;
+            width: 33px;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        #dp-prev {
+            left: 15px;
+            transform: rotate(180deg);
+        }
+
+        #dp-dots {
+            position: absolute;
+            bottom: 25px;
+            z-index: 12;
+            left: 38%;
+            cursor: default;
+        }
+
+        #dp-dots li {
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            background: #fff;
+            border-radius: 50%;
+        }
+
+        #dp-dots li:hover {
+            cursor: pointer;
+            background: goldenrod;
+            transition: background 0.3s;
+        }
+
+        #dp-dots li.active {
+            background: goldenrod;
+        }
+
+        .dp_item {
+            width: 85%;
+        }
+
+        .dp-content,
+        .dp-img {
+            text-align: left;
+        }
+
+        .dp_item {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            border-top: none;
+        }
+
+        .dp-content {
+            padding-left: 100px;
+            padding-right: 0;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .dp-content h2 {
+            color: #41414b;
+            font-family: Circular Std Bold;
+            font-size: 48px;
+            max-width: 460px;
+            margin-top: 8px;
+            margin-bottom: 0px;
+        }
+
+        .dp-content p {
+            color: #74747f;
+            max-width: 490px;
+            margin-top: 15px;
+            font-size: 24px;
+        }
+
+        .dp-content .site-btn {
+            margin-top: 15px;
+            font-size: 18px;
+            padding: 19px 40px;
+        }
+
+        .dp-img:before {
+            background: -webkit-linear-gradient(-90deg,
+                    rgba(255, 255, 255, 0.25),
+                    rgba(255, 255, 255, 0));
+            background: -o-linear-gradient(-90deg,
+                    rgba(255, 255, 255, 0.25),
+                    rgba(255, 255, 255, 0));
+            background: -moz-linear-gradient(-90deg,
+                    rgba(255, 255, 255, 0.25),
+                    rgba(255, 255, 255, 0));
+            background: linear-gradient(-90deg,
+                    rgba(255, 255, 255, 0.75),
+                    rgba(255, 255, 255, 0));
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 25%;
+            z-index: 1;
+            top: 0;
+            pointer-events: none;
+            background: -webkit-linear-gradient(-90deg,
+                    rgba(255, 255, 255, 0),
+                    rgba(255, 255, 255, 0.75));
+            background: -o-linear-gradient(-90deg,
+                    rgba(255, 255, 255, 0),
+                    rgba(255, 255, 255, 0.75));
+            background: -moz-linear-gradient(-90deg,
+                    rgba(255, 255, 255, 0),
+                    rgba(255, 255, 255, 0.75));
+            background: linear-gradient(-90deg,
+                    rgba(255, 255, 255, 0),
+                    rgb(255, 255, 255));
+        }
+
+        .dp-img img {
+            object-fit: cover;
+            object-position: right;
+        }
+
+        #dp-slider,
+        .dp-img img {
+            height: 738px;
+        }
+
+        #dp-slider .dp_item:hover:not(:first-child) {
+            cursor: pointer;
+        }
+
+        .site-btn {
+            color: #fff;
+            font-size: 18px;
+            font-family: "Circular Std Medium";
+            background: goldenrod;
+            padding: 14px 33px;
+            display: inline-block;
+            border-radius: 50px;
+            position: relative;
+            top: -10px;
+            text-decoration: none;
+        }
+
+        .site-btn:hover {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .btn {
+            padding: 0.6rem 1rem;
+            border-radius: 5px;
+            position: relative;
+            border: 0;
+            text-align: center;
+        }
+
+        .btn_1 {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn_1:hover {
+            opacity: 0.8;
+        }
+
+        .btn_2 {
+            background-color: var(--white);
+            color: var(--dark);
+        }
+
+        .btn_2:hover {
+            box-shadow: rgb(1, 1, 1) 3px 3px 6px 0px inset,
+                rgba(1, 1, 1, 0.5) -3px -3px 6px 1px inset;
+            color: var(--dark);
+        }
+
+        .btn_3 {
+            display: block;
+            background-color: 0;
+            color: var(--white);
+            position: relative;
+            font-family: var(--default_font);
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+
+        .btn_3:before {
+            content: "";
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 40px;
+            height: 40px;
+            transition: 0.5s;
+            transform: translate(0%, -50%);
+        }
+
+        .btn_3:after {
+            content: "\f178";
+            font-family: "FontAwesome";
+            margin-left: 5px;
+        }
+
+        .btn_3:hover:before {
+            border-radius: 40px;
+            width: 100%;
+        }
+
+        .divisions {
+            position: relative;
+        }
+
+        .title_header {
+            margin: auto;
+            text-align: center;
+            width: 60%;
+        }
+
+        .ball:before {
+            content: "";
+            border-radius: 50%;
+            background-color: rgba(1, 1, 1, 0.2);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 30px;
+            height: 30px;
+            transform: translate(-50%, -50%);
+        }
+
+        .link-tag {
+            position: relative;
+        }
+
+        .link-tag:before {
+            content: "\f0da";
+            font-family: "FontAwesome";
+            margin-right: 5px;
+            transition: 0.5s;
+            color: var(--primary_dark);
+        }
+
+        .link-tag:hover:before {
+            margin-right: 10px;
+            color: var(--black);
+        }
+
+        .link-tag:hover {
+            color: var(--primary_dark);
+        }
+
+        @media (max-width: 920px) {
+            .flex {
+                flex-wrap: wrap;
+            }
+
+            .padding_1x,
+            .padding_2x,
+            .padding_3x,
+            .padding_4x {
+                padding: 1rem;
+            }
+
+            .big {
+                font-size: 1.8em;
+            }
+
+            .medium {
+                font-size: 1.6em;
+            }
+
+            .small {
+                font-size: 1.1em;
+            }
+
+            .btn {
+                padding: 0.5rem 1rem;
+            }
+
+            a,
+            p,
+            .btn {
+                font-size: 12px;
+            }
+
+            .title_header {
+                width: 100%;
+            }
+        }
+
+        /*************************** Navbar ****************************/
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 2rem;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--white);
+            background-color: transparent;
+            z-index: 999;
+            transition: 0.5s;
+        }
+
+        nav a {
+            color: var(--primary);
+        }
+
+        nav a:hover {
+            color: var(--primary_dark);
+        }
+
+        nav figure {
+            width: 200px;
+            font-weight: 800;
+            font-size: 1.5em;
+        }
+
+        .ham {
+            width: 30px;
+            height: 15px;
+            position: relative;
+            color: var(--lite);
+            z-index: 11 !important;
+        }
+
+        .ham:before,
+        .ham:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 40px;
+            z-index: 1;
+            transition: 0.5s;
+        }
+
+        .ham:before {
+            top: 0;
+            width: 50%;
+        }
+
+        .ham:after {
+            bottom: 0;
+            width: 100%;
+        }
+
+        .ham:hover:before,
+        .ham:hover:after {
+            background-color: var(--primary_dark);
+        }
+
+        .hamburger:before {
+            width: 100%;
+            transform: rotate(50deg);
+            top: 6px;
+        }
+
+        .hamburger:after {
+            transform: rotate(-50deg);
+            bottom: 6px;
+        }
+
+        @media (max-width: 920px) {
+            nav {
+                padding: 1rem;
+            }
+
+            nav figure {
+                font-size: 1.1em;
+            }
+        }
+
+        menu {
+            position: fixed;
+            left: -105%;
+            top: 0;
+            z-index: 99;
+            background-color: var(--dark);
+            width: 350px;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            overflow-y: auto;
+            transition: 0.5s;
+        }
+
+        menu figure {
+            width: 250px;
+            font-size: 2em;
+            color: var(--white);
+        }
+
+        menu .details {
+            padding-top: 6rem;
+        }
+
+        menu .details a {
+            display: flex;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        menu .details a iconify-icon {
+            margin-right: 10px;
+        }
+
+        menu a,
+        menu .dropdown {
+            color: var(--lite);
+            display: block;
+            padding: 0.5rem 0;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        menu .dropdown {
+            display: inline-block;
+        }
+
+        menu a:hover,
+        menu .dropdown:hover {
+            color: var(--white);
+        }
+
+        menu .dropdown_content {
+            display: none;
+        }
+
+        menu .links a:before,
+        menu .links .dropdown dt:before {
+            font-family: "FontAwesome";
+            margin-right: 5px;
+            transition: 0.5s;
+        }
+
+        menu .links a:before {
+            content: "\f0da";
+        }
+
+        menu .links .dropdown dt:before {
+            content: "\f0da";
+        }
+
+        menu .links .dropdown dt:hover:before,
+        menu .links a:hover:before {
+            margin-right: 10px;
+        }
+
+        menu .links .dropdown_content a:before {
+            content: "\f105";
+        }
+
+        @media (max-width: 920px) {
+            menu {
+                width: 100%;
+            }
+        }
+
+        /*************************** HEADER ****************************/
+        header {
+            width: 100%;
+            background: linear-gradient(to right,
+                    var(--black) 10%,
+                    var(--gray) 50%,
+                    rgba(1, 1, 1, 0.1) 100%),
+                url("https://i.postimg.cc/pdJnpSFp/header.jpg");
+            background-size: cover;
+            background-position: bottom;
+            color: var(--white);
+        }
+
+        header article {
+            width: min(100%, 700px);
+            padding: 10rem 2rem;
+        }
+
+        header article p {
+            color: var(--lite);
+        }
+
+        header article em {
+            color: var(--primary_lite);
+        }
+
+        @media (max-width: 920px) {
+            header {
+                background: linear-gradient(to right,
+                        var(--black) 10%,
+                        var(--gray) 80%,
+                        rgba(1, 1, 1, 0.4) 100%),
+                    url("../../assets/images/header.jpg");
+                background-size: cover;
+                background-position: bottom;
+            }
+
+            header article {
+                padding: 7rem 1rem;
+            }
+        }
+
+        /*************************** ADDITIONAL ****************************/
+        .additional {
+            flex-wrap: wrap;
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            z-index: 999;
+            max-width: 400px;
+        }
+
+        .additional section {
+            flex: 1 1 100%;
+            position: relative;
+        }
+
+        .alert {
+            background-color: var(--dark);
+            border: 1px solid var(--lite);
+            border-radius: 10px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        .alert .close {
+            position: absolute;
+            color: var(--lite);
+            right: 0.5rem;
+            top: 0.5rem;
+        }
+
+        .alert .close:hover {
+            color: var(--white);
+        }
+
+        .alert iconify-icon {
+            font-size: 2em;
+            margin-right: 20px;
+        }
+
+        .alert iconify-icon[icon="subway:error"] {
+            color: red;
+        }
+
+        .alert iconify-icon[icon="bx:error"] {
+            color: #d3a120;
+        }
+
+        .alert .title {
+            color: var(--white);
+        }
+
+        .alert p {
+            color: var(--lite);
+        }
+
+        @media (max-width: 520px) {
+            .additional {
+                max-width: 100%;
+                width: 100%;
+                left: 50%;
+                transform: translate(-50%, 0);
+                padding: 1rem;
+            }
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-color: var(--gray);
+            width: 100%;
+            height: 100%;
+        }
+
+        #roll_back {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: var(--dark);
+            border-radius: 5px;
+            border: 2px solid var(--primary);
+            padding: 5px 10px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 11;
+            box-shadow: 0px 6px 16px -6px rgba(1, 1, 1, 0.5);
+            color: var(--white);
+            font-weight: 900;
+        }
+
+        /*************************** DIVISIONS ****************************/
+        /* ============= DIVISION_1 ============== */
+        .division_1 {
+            background-color: var(--dark);
+            color: var(--white);
+        }
+
+        .division_1 figure {
+            width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+        .division_1 figure img {
+            width: 100%;
+            position: relative;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 10px;
+        }
+
+        .division_1 figure:before {
+            content: "";
+            width: 90%;
+            height: 90%;
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            background-color: var(--primary);
+            border-radius: 10px;
+        }
+
+        .division_1 article p {
+            color: var(--lite);
+        }
+
+        .division_1 aside {
+            align-items: center;
+            margin-top: 3rem;
+        }
+
+        .division_1 aside span {
+            padding-right: 50px;
+            color: var(--white);
+        }
+
+        .division_1 aside span:not(:first-child) {
+            padding-left: 50px;
+        }
+
+        .division_1 aside span:not(:last-child) {
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        @media (max-width: 920px) {
+            .division_1 figure img {
+                width: 35%;
+            }
+
+            .division_1 figure:before {
+                width: 30%;
+                height: 95%;
+            }
+
+            .division_1 aside {
+                margin-top: 2rem;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .division_1 figure img {
+                width: 100%;
+            }
+
+            .division_1 figure:before {
+                width: 90%;
+                height: 90%;
+                top: -10px;
+                left: -10px;
+            }
+
+            .division_1 aside span {
+                padding-right: 20px;
+            }
+
+            .division_1 aside span:not(:first-child) {
+                padding-left: 20px;
+            }
+        }
+
+        /* ============= DIVISION_2 ============== */
+        .division_2 .flex_content:first-child {
+            width: 60%;
+            text-align: center;
+        }
+
+        .division_2 figure {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .division_2 figure img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .division_2 .flex_content:first-child figure,
+        .division_2 .flex_content:first-child figure img {
+            height: 100%;
+        }
+
+        .division_2 .flex_content:first-child figure figcaption {
+            width: 90%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: var(--white);
+            color: var(--dark);
+            z-index: 1;
+        }
+
+        .division_2 .cards {
+            flex-wrap: wrap;
+        }
+
+        .division_2 .cards .card {
+            flex: 1 1 100%;
+            color: var(--dark);
+        }
+
+        .division_2 .cards .card img {
+            max-height: 50vh;
+        }
+
+        .division_2 .cards .card img,
+        .division_2 .cards .card figcaption {
+            flex: 1 1 50%;
+        }
+
+        .division_2 .cards .card:nth-child(even) {
+            text-align: right;
+        }
+
+        @media (max-width: 1420px) {
+            .division_2 .cards .card img {
+                max-height: 30vh;
+            }
+        }
+
+        @media (max-width: 1180px) {
+            .division_2 {
+                flex-wrap: wrap;
+            }
+
+            .division_2 .flex_content:first-child {
+                width: 100%;
+            }
+
+            .division_2 .flex_content:first-child figure img {
+                display: none;
+            }
+
+            .division_2 .flex_content:first-child figure figcaption {
+                position: relative;
+                width: 100%;
+            }
+
+            .division_2 .cards .card img {
+                max-height: 50vh;
+            }
+        }
+
+        @media (max-width: 520px) {
+
+            .division_2,
+            .division_1 {
+                padding: 0 !important;
+            }
+
+            .division_2 .cards .card {
+                display: block;
+                border-radius: 10px;
+                overflow: hidden;
+            }
+
+            .division_2 .cards .card:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            .division_2 .cards .card img {
+                max-height: 100%;
+                border-radius: 10px;
+            }
+
+            .division_2 .cards .card figcaption {
+                position: absolute;
+                background-color: var(--white);
+                bottom: 0;
+                left: 50%;
+                width: 90%;
+                border-radius: 10px;
+                bottom: 1rem;
+                transform: translate(-50%, 0%);
+                text-align: center;
+            }
+
+            .division_2 .cards .card:nth-child(even) {
+                text-align: center;
+            }
+        }
+
+        /* ============= DIVISION_3 ============== */
+        .division_3 section {
+            width: 100%;
+            border-radius: 10px;
+            background-color: #fef8e8;
+            margin: auto;
+            justify-content: space-between;
+            box-shadow: rgba(1, 1, 1, 0.2) 3px 3px 6px 0px inset,
+                rgba(1, 1, 1, 0.2) -3px -3px 6px 1px inset;
+        }
+
+        .division_3 figure {
+            width: 200px;
+            margin-right: 20px;
+        }
+
+        .division_3 figure img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .division_3 .btn {
+            display: block;
+        }
+
+        @media (max-width: 1020px) {
+            .division_3 figure {
+                width: 100px;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .division_3 figure {
+                width: 80px;
+            }
+        }
+
+        /*************************** FOOTER ****************************/
+        footer {
+            width: 100%;
+            background-color: var(--dark);
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        footer section {
+            flex: 1 1 100%;
+        }
+
+        footer a,
+        footer p {
+            color: var(--lite);
+        }
+
+        footer .flex_content:first-child a:not(:last-child) {
+            margin-right: 20px;
+        }
+
+        footer .flex_content a:not(:last-child) {
+            margin-right: 50px;
+        }
+
+        footer .flex_content a .fa {
+            font-size: 1.6em;
+        }
+
+        footer .flex_content a:hover {
+            color: var(--white);
+        }
+
+        @media (max-width: 920px) {
+            footer {
+                padding-top: 2rem;
+            }
+
+            footer section {
+                padding: 0rem 1rem !important;
+                text-align: left;
+            }
+
+            footer .flex_content:not(:first-child) a {
+                margin-right: 0px;
+                margin: 1rem 0;
+                display: block;
+            }
+        }
+
+        /*************************** TESTIMONIAL ****************************/
+        .testimonial {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #3d5a80;
+            color: #3d5a80;
+        }
+
+        .testimonial-slide {
+            padding: 40px 20px;
+        }
+
+        .testimonial_box-top {
+            background-color: #e0fbfc;
+            padding: 30px;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            box-shadow: 5px 5px 20px rgba(152, 193, 217, 0.493);
+        }
+
+        .testimonial_box-icon {
+            padding: 10px 0;
+        }
+
+        .testimonial_box-icon i {
+            font-size: 25px;
+            color: #14213d;
+        }
+
+        .testimonial_box-text {
+            padding: 10px 0;
+        }
+
+        .testimonial_box-text p {
+            color: #293241;
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 0;
+        }
+
+        .testimonial_box-img {
+            padding: 20px 0 10px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .testimonial_box-img img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50px;
+            border: 2px solid #e5e5e5;
+        }
+
+        .testimonial_box-name {
+            padding-top: 10px;
+        }
+
+        .testimonial_box-name h4 {
+            font-size: 20px;
+            line-height: 25px;
+            color: #293241;
+            margin-bottom: 0;
+        }
+
+        .testimonial_box-job p {
+            color: #293241;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            line-height: 20px;
+            font-weight: 300;
+            margin-bottom: 0;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAV SECTION-->
+    <nav class="flex">
+        <figure class="logo"><a href="#">EDGECUT</a></figure>
+        <a href="javascript:void(0)" class="ham" onclick="closer()">
+        </a>
+    </nav>
+
+    <!-- SLIDER SECTION -->
+    <div id="slider">
+        <div class="dp-wrap">
+            <div id="dp-slider">
+
+                <div class="dp_item" data-class="1" data-position="1">
+                    <div class="dp-content">
+
+                        <h2>FOR ALL YOUR
+                            FURNITURE NEEDS</h2>
+                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis,
+                            illo maxime voluptatem a itaque suscipit.</p>
+                        <a href="#" class="site-btn">Contact Us</a>
+                        <a href="#" class="site-btn">About Us</a>
+                    </div>
+                    <div class="dp-img">
+                        <img class="img-fluid"
+                            src="https://i.postimg.cc/rpTXWBb0/MV5-BOTQ0-NDY0-Y2-Mt-MTdi-Yi00-Zjgz-LWJj-Nm-It-Nz-Yw-Y2-Nk-Zjll-Ym-I1-Xk-Ey-Xk-Fqc-Gde-QXVy-NDg4-Mjkz-NDk-V1.jpg"
+                            alt="investing">
+                    </div>
+                </div>
+
+                <div class="dp_item" data-class="2" data-position="2">
+                    <div class="dp-content">
+                        <h2>FOR ALL YOUR
+                            FURNITURE NEEDS</h2>
+                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis,
+                            illo maxime voluptatem a itaque suscipit.</p>
+                        <a href="#" class="site-btn">Contact Us</a>
+                        <a href="#" class="site-btn">About Us</a>
+                    </div>
+                    <div class="dp-img">
+                        <img class="img-fluid" src="https://i.postimg.cc/pVsWvLS0/ffbd73fd0e5e40a8443e11c9d2b29d5d.jpg"
+                            alt="investing">
+                    </div>
+                </div>
+
+                <div class="dp_item" data-class="3" data-position="3">
+                    <div class="dp-content">
+
+                        <h2>FOR ALL YOUR
+                            FURNITURE NEEDS</h2>
+                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis,
+                            illo maxime voluptatem a itaque suscipit.</p>
+                        <a href="#" class="site-btn">Contact Us</a>
+                        <a href="#" class="site-btn">About Us</a>
+                    </div>
+                    <div class="dp-img">
+                        <img class="img-fluid"
+                            src="https://i.postimg.cc/tgFRGt0P/MV5-BMGM2-Zm-E4-Yz-Mt-OTBm-NS00-Nm-E4-LWI4-NTUt-Mjg3-ZTJj-ZDYw-ZTc5-Xk-Ey-Xk-Fqc-Gde-QXVy-NDg4-Mjkz-NDk-V1.jpg"
+                            alt="investing">
+                    </div>
+                </div>
+
+                <div class="dp_item" data-class="4" data-position="4">
+                    <div class="dp-content">
+
+                        <h2>FOR ALL YOUR
+                            FURNITURE NEEDS</h2>
+                        <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus quidem maiores perspiciatis,
+                            illo maxime voluptatem a itaque suscipit.</p>
+                        <a href="#" class="site-btn">Contact Us</a>
+                        <a href="#" class="site-btn">About Us</a>
+                    </div>
+                    <div class="dp-img">
+                        <img class="img-fluid"
+                            src="https://i.postimg.cc/wv6zKCQ8/MV5-BNj-I4-Yj-Jl-ZTct-Mj-U5-NS00-MGFh-LWFk-Zjgt-OTlj-N2-Y4-Nz-I1-Mj-A4-Xk-Ey-Xk-Fqc-Gde-QXVy-NDg4-Mjkz-NDk-V1.jpg"
+                            alt="investing">
+                    </div>
+                </div>
+            </div>
+
+            <span id="dp-next">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.401 51.401">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                                stroke: gold;
+                                stroke-miterlimit: 10;
+                                stroke-width: 7px;
+                            }
+                        </style>
+                    </defs>
+                    <path id="Rectangle_4_Copy" data-name="Rectangle 4 Copy" class="cls-1" d="M32.246,0V33.178L0,31.953"
+                        transform="translate(0.094 25.276) rotate(-45)" />
+                </svg>
+            </span>
+
+            <span id="dp-prev">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 51.401 51.401">
+                    <defs>
+                        <style>
+                            .cls-1 {
+                                fill: none;
+                                stroke: gold;
+                                stroke-miterlimit: 10;
+                                stroke-width: 7px;
+                            }
+                        </style>
+                    </defs>
+                    <path id="Rectangle_4_Copy" data-name="Rectangle 4 Copy" class="cls-1" d="M32.246,0V33.178L0,31.953"
+                        transform="translate(0.094 25.276) rotate(-45)" />
+                </svg>
+            </span>
+
+            <ul id="dp-dots">
+                <li data-class="1" class="active"></li>
+                <li data-class="2"></li>
+                <li data-class="3"></li>
+                <li data-class="4"></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MENU SECTION -->
+    <menu>
+
+        <section class="details padding_1x">
+            <!-- Mode Button -->
+            <!-- <div>
+                <input type="checkbox" class="checkbox" id="checkbox">
+                <label for="checkbox" class="checkbox-label">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                    <span class="ball"></span>
+                </label>
+            </div> -->
+
+            <a href="javascript:void(0)">
+                <iconify-icon icon="iconoir:phone"></iconify-icon> (+000) 123 4567
+            </a>
+            <a href="mailto:info@websitename.com">
+                <iconify-icon icon="mdi:email-outline"></iconify-icon> info@websitename.com
+            </a>
+            <a href="javascript:void(0)">
+                <iconify-icon icon="entypo:address"></iconify-icon> 24971 Avenue Stanford, Santa Clarita, CA 91355
+            </a>
+            <a href="javascript:void(0)">
+                <iconify-icon icon="ri:time-line"></iconify-icon> Every day, 6am - 6pm
+            </a>
+
+        </section>
+
+        <section class="links padding_1x">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT</a>
+            <a href="#">FURNITURES</a>
+            <a href="#">BLOG</a>
+            <a href="#">CONTACT US</a>
+
+            <!-- Log In & Search Button -->
+            <form class="d-flex flex-column mt-5 gap-1">
+
+                <button class="btn text-white" type="login">
+                    <label for="login" href="#">LOGIN</label> <i class="fas fa-user" href="#"></i>
+                </button>
+
+                <button class="btn text-white gap-5" type="search">
+                    <label for="search" href="#">SEARCH</label> <i class="fas fa-search" href="#"></i>
+                </button>
+            </form>
+
+        </section>
+
+    </menu>
+
+    <!-- HEADER SECTION -->
+    <header>
+        <article>
+            <h1 class="title big"> <em>Chic</em> & <em>Unique</em> Pieces For Your Home<em>.</em> </h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s.</p>
+            <a href="#More" class="btn btn_3">Explore more</a>
+        </article>
+    </header>
+
+    <!-- MAIN SECTION -->
+    <main id="More">
+        <!--DIVISION_1-->
+        <div class="divisions division_1 flex padding_2x">
+            <section class="flex_content padding_2x">
+                <figure>
+                    <img src="https://i.postimg.cc/qqt4ntzz/01.jpg" alt="" loading="lazy" />
+                </figure>
+            </section>
+            <section class="flex_content padding_2x">
+                <article>
+                    <h2 class="title medium">Let's make your Interior better.</h2>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                        believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't
+                        anything embarrassing hidden in the middle of text. </p>
+                    <aside class="fixed_flex">
+                        <span>
+                            <h4 class="title small">200+</h4>
+                            <p>New Furnitures</p>
+                        </span>
+                        <span>
+                            <h4 class="title small">100+</h4>
+                            <p>Recycled Products</p>
+                        </span>
+                    </aside>
+                </article>
+            </section>
+        </div>
+
+        <!--DIVISION_2-->
+        <div class="divisions division_2 flex padding_2x">
+            <section class="flex_content padding_2x">
+                <figure>
+                    <img src="https://i.postimg.cc/XvVWL1rM/div-2.jpg" alt="" loading="lazy" />
+                    <figcaption class="padding_1x">
+                        <h2 class="title medium">What We Do?</h2>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </figcaption>
+                </figure>
+            </section>
+            <section class="flex_content cards padding_2x flex">
+                <figure class="flex card">
+                    <img src="https://i.postimg.cc/g2ydvbkq/01.jpg" alt="" loading="lazy" />
+                    <figcaption class="padding_2x">
+                        <h3 class="title small">Indoor & Outdoor Furniture</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </figcaption>
+                </figure>
+                <figure class="flex card">
+                    <figcaption class="padding_2x">
+                        <h3 class="title small">Large contracts for Doors</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </figcaption>
+                    <img src="https://i.postimg.cc/FsLhHJM6/02.jpg" alt="" loading="lazy" />
+                </figure>
+                <figure class="flex card">
+                    <img src="https://i.postimg.cc/y65VKTb9/03.jpg" alt="" loading="lazy" />
+                    <figcaption class="padding_2x">
+                        <h3 class="title small">Kitchen, Bed room sets</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </figcaption>
+                </figure>
+                <figure class="flex card">
+                    <figcaption class="padding_2x">
+                        <h3 class="title small">Exibition Stands</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </figcaption>
+                    <img src="https://i.postimg.cc/j2GKhs7v/04.jpg" alt="" loading="lazy" />
+                </figure>
+            </section>
+        </div>
+
+        <div class="divisions division_3 padding_4x">
+            <section class="flex padding_1x">
+                <figure>
+                    <img src="https://i.postimg.cc/T3vfL3G3/div-3.png" alt="" loading="lazy" />
+                </figure>
+                <article>
+                    <h3 class="title small">Recycle old wood pallets to create Beautiful Furniture Items.</h3>
+                    <p>We have a dedicated team to recycle wood waste to create artistic gadgets such as <b>Mobile
+                            Holders</b>, <b>Desktop Clocks</b>, <b>Wall Clocks</b>,<b>Pen Holders</b>, <b>Chop
+                            Boards</b>, <b>Decorative Items</b> & much more...</p>
+                    <a href="#" class="btn btn_1">Contact us</a>
+                </article>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- TESTIMONIAL SECTION -->
+    <main>
+        <section>
+            <div class="testimonial">
+                <div class="container">
+                    <div class="testimonial__inner">
+                        <div class="testimonial-slider">
+                            <div class="testimonial-slide">
+                                <div class="testimonial_box">
+                                    <div class="testimonial_box-inner">
+                                        <div class="testimonial_box-top">
+                                            <div class="testimonial_box-icon">
+                                                <i class="fas fa-quote-right"></i>
+                                            </div>
+                                            <div class="testimonial_box-text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                                                    optio facilis beatae.</p>
+                                            </div>
+                                            <div class="testimonial_box-img">
+                                                <img src="https://i.ibb.co/hKgs8gm/profile.jpg" alt="profile">
+                                            </div>
+                                            <div class="testimonial_box-name">
+                                                <h4>John Doe</h4>
+                                            </div>
+                                            <div class="testimonial_box-job">
+                                                <p>MANAGER</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <div class="testimonial_box">
+                                    <div class="testimonial_box-inner">
+                                        <div class="testimonial_box-top">
+                                            <div class="testimonial_box-icon">
+                                                <i class="fas fa-quote-right"></i>
+                                            </div>
+                                            <div class="testimonial_box-text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                                                    optio facilis beatae.</p>
+                                            </div>
+                                            <div class="testimonial_box-img">
+                                                <img src="https://i.ibb.co/hKgs8gm/profile.jpg" alt="profile">
+                                            </div>
+                                            <div class="testimonial_box-name">
+                                                <h4>John Doe</h4>
+                                            </div>
+                                            <div class="testimonial_box-job">
+                                                <p>CEO</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <div class="testimonial_box">
+                                    <div class="testimonial_box-inner">
+                                        <div class="testimonial_box-top">
+                                            <div class="testimonial_box-icon">
+                                                <i class="fas fa-quote-right"></i>
+                                            </div>
+                                            <div class="testimonial_box-text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                                                    optio facilis beatae.</p>
+                                            </div>
+                                            <div class="testimonial_box-img">
+                                                <img src="https://i.ibb.co/hKgs8gm/profile.jpg" alt="profile">
+                                            </div>
+                                            <div class="testimonial_box-name">
+                                                <h4>John Doe</h4>
+                                            </div>
+                                            <div class="testimonial_box-job">
+                                                <p>Co-Founder</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonial-slide">
+                                <div class="testimonial_box">
+                                    <div class="testimonial_box-inner">
+                                        <div class="testimonial_box-top">
+                                            <div class="testimonial_box-icon">
+                                                <i class="fas fa-quote-right"></i>
+                                            </div>
+                                            <div class="testimonial_box-text">
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus
+                                                    optio facilis beatae.</p>
+                                            </div>
+                                            <div class="testimonial_box-img">
+                                                <img src="https://i.ibb.co/hKgs8gm/profile.jpg" alt="profile">
+                                            </div>
+                                            <div class="testimonial_box-name">
+                                                <h4>John Doe</h4>
+                                            </div>
+                                            <div class="testimonial_box-job">
+                                                <p>SEO</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="flex">
+        <section class="flex_content padding_2x">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-youtube"></i></a>
+        </section>
+        <section class="flex_content">
+            <a href="#">Home</a>
+            <a href="#">Contact us</a>
+            <a href="#">About us</a>
+            <a href="#">Cookie Policy</a>
+        </section>
+        <section class="flex_content padding_1x">
+            <p>© 2023 website name || All rights reserved</p>
+        </section>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <div class="additional flex"></div>
+    <a href="#" id="roll_back" class="animate"><i class="fa fa-angle-up"></i></a>
+
+
+
+    <!-- *************************** ALL SCRIPT SECTION **************************** -->
+    <!-- MODE CHANGE SCRIPT -->
+    <!-- <script>
+        const checkbox = document.getElementById("checkbox")
+        checkbox.addEventListener("change", () => {
+            document.body.classList.toggle("dark")
+        })
+    </script> -->
+
+    <!-- SLIDER SCRIPT -->
+    <script>
+        $(document).ready(function () {
+            function detect_active() {
+                // get active
+                var get_active = $("#dp-slider .dp_item:first-child").data("class");
+                $("#dp-dots li").removeClass("active");
+                $("#dp-dots li[data-class=" + get_active + "]").addClass("active");
+            }
+            $("#dp-next").click(function () {
+                var total = $(".dp_item").length;
+                $("#dp-slider .dp_item:first-child").hide().appendTo("#dp-slider").fadeIn();
+                $.each($(".dp_item"), function (index, dp_item) {
+                    $(dp_item).attr("data-position", index + 1);
+                });
+                detect_active();
+            });
+
+            $("#dp-prev").click(function () {
+                var total = $(".dp_item").length;
+                $("#dp-slider .dp_item:last-child").hide().prependTo("#dp-slider").fadeIn();
+                $.each($(".dp_item"), function (index, dp_item) {
+                    $(dp_item).attr("data-position", index + 1);
+                });
+
+                detect_active();
+            });
+
+            $("#dp-dots li").click(function () {
+                $("#dp-dots li").removeClass("active");
+                $(this).addClass("active");
+                var get_slide = $(this).attr("data-class");
+                console.log(get_slide);
+                $("#dp-slider .dp_item[data-class=" + get_slide + "]")
+                    .hide()
+                    .prependTo("#dp-slider")
+                    .fadeIn();
+                $.each($(".dp_item"), function (index, dp_item) {
+                    $(dp_item).attr("data-position", index + 1);
+                });
+            });
+
+            $("body").on("click", "#dp-slider .dp_item:not(:first-child)", function () {
+                var get_slide = $(this).attr("data-class");
+                console.log(get_slide);
+                $("#dp-slider .dp_item[data-class=" + get_slide + "]")
+                    .hide()
+                    .prependTo("#dp-slider")
+                    .fadeIn();
+                $.each($(".dp_item"), function (index, dp_item) {
+                    $(dp_item).attr("data-position", index + 1);
+                });
+
+                detect_active();
+            });
+        });
+
+    </script>
+
+    <!-- FURNITURE SCRIPT -->
+    <script>
+        //GLOBAL VARIABLES
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        var count = 0;
+
+        //DROPDOWN
+        $(".dropdown dt").click(function () {
+            $(this).next(".dropdown_content").toggle("slow");
+        });
+
+
+        //DETECT MOBILE DEVICE
+        if (isMobile) {
+            $("menu .details a").click(function () {
+                if ($(this).index() == 0) {
+                    $(this).attr("href", "tel:1234567890");
+                }
+                if ($(this).index() == 3) {
+                    popup('<i class="fa fa-times"></i></a><iconify-icon icon="bx:error"></iconify-icon><aside><h3 class="title small">Timings may vary</h3><p>For accurate timings please connect through a call & confirm.</p></aside>', 'alert');
+                }
+            });
+        } else {
+            $("menu .details a").click(function () {
+                switch ($(this).index()) {
+                    case 0:
+                        return popup('<i class="fa fa-times"></i></a><iconify-icon icon="subway:error" class="error"></iconify-icon><aside><h3 class="title small">Unsupported device</h3><p>It looks like your device won\'t support for <b>calling</b>. Kindly use a Mobile device.</p></aside>', 'alert');
+                        break;
+                    case 3:
+                        popup('<i class="fa fa-times"></i></a><iconify-icon icon="bx:error"></iconify-icon><aside><h3 class="title small">Timings may vary</h3><p>For accurate timings please connect through a call & confirm.</p></aside>', 'alert');
+                        break;
+                    default:
+                        break;
+                }
+            });
+        }
+
+
+        //POPUP
+        function popup(mssg, type) {
+            if (type == "alert") {
+                if ($(".alert").length < 2) {
+                    count++;
+                    $(".additional").append('<section class="alert alert_' + count + ' flex padding_1x"><a href="javascript:void(0)" onclick="closer(\'modal\',\'alert_' + count + '\')" class="close">' + mssg + '</section>');
+                    setTimeout(function () { $(".alert_" + count).remove(); }, 10000);
+                    if ($(".alert").length > 0) { setTimeout(function () { $(".alert_" + count).prev().remove(); }, 4000); }
+                }
+            }
+        }
+
+
+        //HAM
+        $(".ham").click(function () {
+            if ($("menu").css("left") != "0px") {
+                $(this).addClass(" hamburger");
+                $("body").append('<div class="overlay" onclick="closer()"></div>');
+                $("menu").css("left", "0px");
+                $("body").css({ 'overflow-y': 'hidden' });
+            }
+        });
+
+
+        //CLOSE
+        $(".close").click(function () {
+            $(".overlay").remove();
+            if ($("menu").css("left") >= "0px") {
+                $(".ham").removeClass(" hamburger");
+                $("menu").css("left", "-105%");
+                $("body").css({ 'overflow-y': 'visible' });
+            }
+        });
+        function closer(type, el) {
+            if (type == "modal") {
+                $("." + el).remove();
+                return 1;
+            }
+            $(".overlay").remove();
+            if ($("menu").css("left") >= "0px") {
+                $(".ham").removeClass(" hamburger");
+                $("menu").css("left", "-105%");
+                $("body").css({ 'overflow-y': 'visible' });
+            }
+        }
+
+
+        //Scroller Nav
+        window.onscroll = function () {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                $("nav").css("background-color", "var(--dark)");
+                document.getElementById("roll_back").style.display = "flex";
+            } else {
+                $("nav").css("background-color", "transparent");
+                document.getElementById("roll_back").style.display = "none";
+            }
+        }
+    </script>
+
+    <!-- TESTIMONIAL SCRIPT -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.testimonial-slider').slick({
+                autoplay: true,
+                autoplaySpeed: 1000,
+                speed: 600,
+                draggable: true,
+                infinite: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                arrows: false,
+                dots: false,
+                responsive: [
+                    {
+                        breakpoint: 991,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                        }
+                    },
+                    {
+                        breakpoint: 575,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                        }
+                    }
+                ]
+            });
+        }); 
+    </script>
+
+</body>
+
+</html>
